@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+}
+
+#header {
+    user-select: none;
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding-left: 10px;
+}
+
+h2{
+    color: white;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.menuItem{
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+}
+
+.dropGlobal:hover{
+    background-color: rgb(50, 50, 50);
+}
+.dropGlobal:hover .menuDrop{
+    display: inline-grid;
+}
+.menuDrop{
+    display: none;
+    width: 140px;
+    position: absolute;
+    background-color: rgb(50, 50, 50);
+}
+
+.model{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.model:hover{
+    background-color: rgb(80, 80, 80);
+}
+
+#logo{
+    display: flex;
+}
+
+#logoLink{
+    padding-top: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
