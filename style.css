@@ -123,3 +123,24 @@ h2{
     margin-right: 30px;
     font-family: 'Roboto', sans-serif;
 }
+
+#welcome{
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 5%;
+    box-shadow: white 0px 0px 50px;
+    user-select: none;
+}
+
+#welcome-logo{
+    padding: 5%;
+    width: 90%;
+}
+
+#welcome-message{
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+    font-size: 30px;;
+}
