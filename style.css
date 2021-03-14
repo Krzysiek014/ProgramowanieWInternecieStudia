@@ -1,5 +1,8 @@
 body{
     margin: 0;
+    overflow: hidden;
+    background-image: url("background.png");
+    background-repeat: repeat;
 }
 
 #header {
@@ -9,6 +12,7 @@ body{
     height: 60px;
     display: flex;
     padding-left: 10px;
+    box-shadow: grey 0px 10px 10px;
 }
 
 h2{
@@ -27,6 +31,7 @@ h2{
     width: 120px;
     height: 40px;
     padding: 0px 10px 0px 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .dropGlobal:hover{
@@ -40,12 +45,14 @@ h2{
     width: 140px;
     position: absolute;
     background-color: rgb(50, 50, 50);
+    z-index: 1;
 }
 
 .model{
     padding: 10px;
     text-decoration: none;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .model:hover{
@@ -61,4 +68,49 @@ h2{
     font-size: 30px;
     text-decoration: none;
     color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#content-head{
+    height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: grey;
+    padding-left: 10px;
+    box-shadow: grey 0px 5px 4px;
+    position: relative;
+}
+
+#model-name{
+    margin: auto;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+#images{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 40%;
+    height: inherit;
+    justify-content: space-evenly;
+}
+
+.model-image{
+    width: 60%;
+}
+
+#model-description{
+    font-size: 30px;
+    padding: 20px;
+    text-align: justify;
+    margin-right: 30px;
+    font-family: 'Roboto', sans-serif;
 }
