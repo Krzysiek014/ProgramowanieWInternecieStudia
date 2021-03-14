@@ -13,6 +13,7 @@ body{
     display: flex;
     padding-left: 10px;
     box-shadow: grey 0px 10px 10px;
+    /* -ms-user-select: none; */
 }
 
 h2{
@@ -37,15 +38,20 @@ h2{
 .dropGlobal:hover{
     background-color: rgb(50, 50, 50);
 }
-.dropGlobal:hover .menuDrop{
-    display: inline-grid;
-}
+
 .menuDrop{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
     width: 140px;
     position: absolute;
     background-color: rgb(50, 50, 50);
     z-index: 1;
+}
+
+.dropGlobal:hover>.menuDrop{
+    /* display: inline-grid; */
+    visibility: visible;
 }
 
 .model{
@@ -83,7 +89,7 @@ h2{
 }
 
 #model-name{
-    margin: auto;
+    margin-top: 20px;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
 }
@@ -98,13 +104,16 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
     flex: 0 0 40%;
     height: inherit;
     justify-content: space-evenly;
 }
 
 .model-image{
+    flex-shrink: 0;
     width: 60%;
+
 }
 
 #model-description{
