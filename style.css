@@ -13,7 +13,6 @@ body{
     display: flex;
     padding-left: 10px;
     box-shadow: grey 0px 10px 10px;
-    /* -ms-user-select: none; */
 }
 
 h2{
@@ -32,7 +31,7 @@ h2{
     width: 120px;
     height: 40px;
     padding: 0px 10px 0px 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 .dropGlobal:hover{
@@ -74,7 +73,7 @@ h2{
     font-size: 30px;
     text-decoration: none;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 #content-head{
@@ -91,7 +90,7 @@ h2{
 #model-name{
     margin-top: 20px;
     font-size: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 #content{
@@ -121,7 +120,7 @@ h2{
     padding: 20px;
     text-align: justify;
     margin-right: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 #welcome{
@@ -142,5 +141,6 @@ h2{
 #welcome-message{
     padding: 0px 20px 0px 20px;
     text-align: center;
-    font-size: 30px;;
+    font-size: 30px;
+    font-family: 'Helvetica', sans-serif;
 }
