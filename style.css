@@ -161,6 +161,7 @@ h2{
 
 .ttt-board{
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 210px 210px 210px;
 }
 
