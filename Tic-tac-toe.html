@@ -2,8 +2,9 @@
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8">
-		<title>VOLVO - V60</title>
+		<title>Kółko i krzyżyk</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="Tic-tac-toe.js"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -65,22 +66,32 @@
 		</div>
 		<div id="main">
             <div id="content-head">
-                <h1 id="model-name">Volvo V60</h1>
+                <h1 id="model-name">Kółko i krzyżyk</h1>
 			</div>
-			<div id="content">
-				<div id="images">
-					<img class="model-image" alt="Model image" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Volvo_V60_%E2%80%93_Frontansicht%2C_12._Juni_2011%2C_D%C3%BCsseldorf.jpg" />
-					<img class="model-image" alt="Model image" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Volvo_V60_%E2%80%93_Heckansicht%2C_12._Juni_2011%2C_D%C3%BCsseldorf.jpg" />
+			<div id="game-main">
+				<div id="game">
+					<div class="ttt-board">
+						<div id="ttt-one" onclick="addFigure('ttt-one');" class="ttt-field"></div>
+						<div id="ttt-two" onclick="addFigure('ttt-two');" class="ttt-field"></div>
+						<div id="ttt-three" onclick="addFigure('ttt-three');" class="ttt-field"></div>
+						<div id="ttt-four" onclick="addFigure('ttt-four');" class="ttt-field"></div>
+						<div id="ttt-five" onclick="addFigure('ttt-five');" class="ttt-field"></div>
+						<div id="ttt-six" onclick="addFigure('ttt-six');" class="ttt-field"></div>
+						<div id="ttt-seven" onclick="addFigure('ttt-seven');" class="ttt-field"></div>
+						<div id="ttt-eight" onclick="addFigure('ttt-eight');" class="ttt-field"></div>
+						<div id="ttt-nine" onclick="addFigure('ttt-nine');" class="ttt-field"></div>
+					</div>
 				</div>
-				<p id="model-description">Volvo V60 – samochód osobowy klasy średniej produkowany pod szwedzką marką Volvo od 2011 roku. Od 2018 roku produkowana jest druga generacja modelu. 
-					Volvo V60 I został po raz pierwszy zaprezentowany podczas targów motoryzacyjnych w Paryżu w październiku 2010 roku.
-
-Pojazd jest wersją kombi zaprezentowanego podczas targów motoryzacyjnych w Genewie pół roku wcześniej roku modelu Volvo S60 drugiej generacji. Auto zbudowane zostało na bazie płyty podłogowej, na której zbudowany został model XC60 oraz S80.
-
-W lutym 2013 roku na rynku europejskim zadebiutowała wersja Plug-in Hybrid. W tym samym roku auto przeszło face lifting. Zmienione zostały m.in. przednie reflektory oraz grill, zderzaki i alufelgi.
-
-W kwietniu 2013 roku zadebiutowała wersja R-Design, która cechuje się bardziej agresywną stylizacją oraz obniżonym, sportowym zawieszeniem. W czerwcu 2014 roku uruchomiono produkcję limitowanej, najmocniejszej wersji V60 zwanej Polestar, która napędzana jest sześciocylindrowym silnikiem o mocy 350 KM i posiada napęd na wszystkie koła. W listopadzie 2014 roku zaprezentowano uterenowioną wersję V60 Cross Country. Główne cechy tego pojazdu to podniesione o 6,5 cm zawieszenie oraz zmiany stylistyczne. Samochód w zależności od źródła napędu posiada napęd na przednie lub wszystkie koła.
-				</p>
+				<div id="players">
+					<h1 id="player-turn"></h1>
+					<div id="new-game-content">
+						<h1 id="new-game-header">NOWA GRA</h1>
+						<div id='new-game-blocks'>
+							<div id="one-player" class="new-game-block" onclick="clearBoard(1)">1 GRACZ</div>
+							<div id="two-players" class="new-game-block" onclick="clearBoard(2)">2 GRACZY</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

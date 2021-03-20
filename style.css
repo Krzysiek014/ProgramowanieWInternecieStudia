@@ -91,6 +91,7 @@ h2{
     margin-top: 20px;
     font-size: 50px;
     font-family: 'Helvetica', sans-serif;
+    user-select: none;
 }
 
 #content{
@@ -149,4 +150,150 @@ h2{
     display: flex;
     justify-content: center;
     padding-top: 150px;
+}
+
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 850px;
+}
+
+.ttt-board{
+    display: grid;
+    grid-template-columns: 210px 210px 210px;
+}
+
+.ttt-field{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(80, 80, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ttt-field:hover{
+    background-color: rgb(50, 50, 50);
+}
+
+#ttt-one{
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+}
+
+#ttt-two{
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;;
+}
+
+#ttt-three{
+    border-bottom: 10px solid black;
+}
+
+#ttt-four{
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+}
+
+#ttt-five{
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+}
+
+#ttt-six{
+    border-bottom: 10px solid black;
+}
+
+#ttt-seven{
+    border-right: 10px solid black;
+}
+
+#ttt-eight{
+    border-right: 10px solid black;
+}
+
+.ttt-circle{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 15px solid;
+}
+
+.ttt-cross{
+    width: 150px;
+    height: 150px;
+    rotate: 20;
+    transform: rotate(45deg);
+}
+
+.ttt-cross-vert{
+    position: absolute;
+    width: 15px;
+    height: 150px;
+    background-color: black;
+    margin-left: 67.5px;
+}
+
+.ttt-cross-hor{
+    position: absolute;
+    width: 150px;
+    height: 15px;
+    background-color: black;
+    top: 67.5px;
+}
+
+#game-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#players{
+    width: 400px;
+    height: 250px;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#player-turn{
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    user-select: none;
+}
+
+#new-game-blocks{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.new-game-block{
+    width: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Helvetica', sans-serif;
+    user-select: none;
+}
+
+#one-player{
+    background-color: lightgreen;
+}
+
+#two-players{
+    background-color: lightcoral;
+}
+
+#new-game-header{
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    user-select: none;
+}
+
+#new-game-content{
+    visibility: visible;
 }
