@@ -14,9 +14,9 @@ function addCross(el){
     XelemV.classList.add('ttt-cross-vert');
     XelemH.classList.add('ttt-cross-hor');
 
-    Xelem.append(XelemH);
-    Xelem.append(XelemV);
-    src.append(Xelem);
+    Xelem.appendChild(XelemH);
+    Xelem.appendChild(XelemV);
+    src.appendChild(Xelem);
 }
 
 function addCircle(el){
@@ -25,7 +25,7 @@ function addCircle(el){
     Xelem = document.createElement('div');
     Xelem.classList.add('ttt-circle');
 
-    src.append(Xelem);
+    src.appendChild(Xelem);
 }
 
 function addFigure(el){
@@ -102,9 +102,12 @@ function score_verify(){
             return 2
         }
     }
-    if(score.filter(x => x>0).length == 9){
+    count_filled = 0
+    for(i=0; i<score.length; i++)
+        if(score[i]>0) count_filled++;
+
+    if(count_filled == 9)
         return 3;
-    }
 }
 
 function end_game(){
