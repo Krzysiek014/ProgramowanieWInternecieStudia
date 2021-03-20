@@ -4,6 +4,27 @@ var score = [0,0,0, 0,0,0, 0,0,0];
 var id = ["ttt-one","ttt-two","ttt-three","ttt-four","ttt-five","ttt-six","ttt-seven","ttt-eight","ttt-nine"];
 var aiGameMode = false;
 
+window.onload = function(){
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    if(isIE){
+        document.getElementById('ttt-board').style.display = '-ms-grid';
+        document.getElementById('ttt-two').style['-ms-grid-column'] = '2';
+        document.getElementById('ttt-three').style['-ms-grid-column'] = '3';
+        document.getElementById('ttt-four').style['-ms-grid-row'] = '2';
+        document.getElementById('ttt-five').style['-ms-grid-column'] = '2';
+        document.getElementById('ttt-five').style['-ms-grid-row'] = '2';
+        document.getElementById('ttt-six').style['-ms-grid-column'] = '3';
+        document.getElementById('ttt-six').style['-ms-grid-row'] = '2';
+        document.getElementById('ttt-seven').style['-ms-grid-row'] = '3';
+        document.getElementById('ttt-eight').style['-ms-grid-column'] = '2';
+        document.getElementById('ttt-eight').style['-ms-grid-row'] = '3';
+        document.getElementById('ttt-nine').style['-ms-grid-row'] = '3';
+        document.getElementById('ttt-nine').style['-ms-grid-column'] = '3';
+        
+
+    }
+}
+
 function addCross(el){
     src = document.getElementById(el);
 
@@ -56,9 +77,9 @@ function addFigure(el){
 }
 
 function mark_red(a, b, c){
-    document.getElementById(id[a]).style.backgroundColor = 'red';
-    document.getElementById(id[b]).style.backgroundColor = 'red';
-    document.getElementById(id[c]).style.backgroundColor = 'red';
+    document.getElementById(id[a]).style.backgroundColor = 'green';
+    document.getElementById(id[b]).style.backgroundColor = 'green';
+    document.getElementById(id[c]).style.backgroundColor = 'green';
 }
 
 function score_verify(){
