@@ -5,6 +5,11 @@ body{
     background-repeat: repeat;
 }
 
+.welcomeBody{
+    background:url(https://upload.wikimedia.org/wikipedia/commons/3/39/2018_Volvo_S90_R-Design_D4_Automatic_2.0_Front.jpg);
+    background-size: cover;
+}
+
 #header {
     user-select: none;
     background-color: black;
