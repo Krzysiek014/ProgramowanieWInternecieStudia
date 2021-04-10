@@ -3,7 +3,311 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>VOLVO - WIKI</title>
-		<link rel="stylesheet" href="style.css" />
+		<style>
+			body{
+				margin: 0;
+				overflow: hidden;
+				background-image: url("background.png");
+				background-repeat: repeat;
+			}
+
+			.welcomeBody{
+				background:url(https://upload.wikimedia.org/wikipedia/commons/3/39/2018_Volvo_S90_R-Design_D4_Automatic_2.0_Front.jpg);
+				background-size: cover;
+			}
+
+			#header {
+				user-select: none;
+				background-color: black;
+				width: 100%;
+				height: 60px;
+				display: flex;
+				padding-left: 10px;
+				box-shadow: grey 0px 10px 10px;
+			}
+
+			h2{
+				color: white;
+			}
+
+			#menu{
+				display: flex;
+				justify-content: space-between;
+				margin-left: 10%;
+				width: 30%;
+			}
+
+			.menuItem{
+				text-align: center;
+				width: 120px;
+				height: 40px;
+				padding: 0px 10px 0px 10px;
+				font-family: 'Helvetica', sans-serif;
+			}
+
+			.dropGlobal:hover{
+				background-color: rgb(50, 50, 50);
+			}
+
+			.menuDrop{
+				display: flex;
+				flex-direction: column;
+				visibility: hidden;
+				width: 140px;
+				position: absolute;
+				background-color: rgb(50, 50, 50);
+				z-index: 1;
+			}
+
+			.dropGlobal:hover>.menuDrop{
+				/* display: inline-grid; */
+				visibility: visible;
+			}
+
+			.model{
+				padding: 10px;
+				text-decoration: none;
+				color: white;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			.model:hover{
+				background-color: rgb(80, 80, 80);
+			}
+
+			#logo{
+				display: flex;
+			}
+
+			#logoLink{
+				padding-top: 15px;
+				font-size: 30px;
+				text-decoration: none;
+				color: white;
+				font-family: 'Helvetica', sans-serif;
+			}
+
+			#content-head{
+				height: 100px;
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				background-color: grey;
+				padding-left: 10px;
+				box-shadow: grey 0px 5px 4px;
+				position: relative;
+			}
+
+			#model-name{
+				margin-top: 20px;
+				font-size: 50px;
+				font-family: 'Helvetica', sans-serif;
+				user-select: none;
+			}
+
+			#content{
+				display: flex;
+				flex-direction: row;
+			}
+
+			#images{
+				padding-top: 30px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				flex-shrink: 0;
+				flex: 0 0 40%;
+				height: inherit;
+				justify-content: space-evenly;
+			}
+
+			.model-image{
+				flex-shrink: 0;
+				width: 60%;
+
+			}
+
+			#model-description{
+				font-size: 30px;
+				padding: 20px;
+				text-align: justify;
+				margin-right: 30px;
+				font-family: 'Helvetica', sans-serif;
+			}
+
+			#welcome{
+				width: 600px;
+				height: 500px;
+				background-color: white;
+				opacity: 90%;
+				border-radius: 5%;
+				box-shadow: white 0px 0px 50px;
+				user-select: none;
+			}
+
+			#welcome-logo{
+				padding: 5%;
+				width: 90%;
+			}
+
+			#welcome-message{
+				padding: 0px 20px 0px 20px;
+				text-align: center;
+				font-size: 30px;
+				font-family: 'Helvetica', sans-serif;
+			}
+
+			#main-welcome{
+				display: flex;
+				justify-content: center;
+				padding-top: 150px;
+			}
+
+			#game{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 850px;
+			}
+
+			#ttt-board{
+				display: grid;
+				grid-template-columns: 210px 210px 210px;
+			}
+
+			.ttt-field{
+				width: 200px;
+				height: 200px;
+				background-color: rgb(80, 80, 80);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.ttt-field:hover{
+				background-color: rgb(50, 50, 50);
+			}
+
+			#ttt-one{
+				border-bottom: 10px solid black;
+				border-right: 10px solid black;
+			}
+
+			#ttt-two{
+				border-bottom: 10px solid black;
+				border-right: 10px solid black;;
+			}
+
+			#ttt-three{
+				border-bottom: 10px solid black;
+			}
+
+			#ttt-four{
+				border-bottom: 10px solid black;
+				border-right: 10px solid black;
+			}
+
+			#ttt-five{
+				border-bottom: 10px solid black;
+				border-right: 10px solid black;
+			}
+
+			#ttt-six{
+				border-bottom: 10px solid black;
+			}
+
+			#ttt-seven{
+				border-right: 10px solid black;
+			}
+
+			#ttt-eight{
+				border-right: 10px solid black;
+			}
+
+			.ttt-circle{
+				width: 130px;
+				height: 130px;
+				border-radius: 50%;
+				border: 15px solid;
+			}
+
+			.ttt-cross{
+				width: 150px;
+				height: 150px;
+				transform: rotate(45deg);
+			}
+
+			.ttt-cross-vert{
+				position: absolute;
+				width: 15px;
+				height: 150px;
+				background-color: black;
+				margin-left: 67.5px;
+			}
+
+			.ttt-cross-hor{
+				position: absolute;
+				width: 150px;
+				height: 15px;
+				background-color: black;
+				top: 67.5px;
+			}
+
+			#game-main{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			#players{
+				width: 400px;
+				height: 250px;
+				background-color: grey;
+				justify-content: center;
+				align-items: center;
+				border-radius: 20px;
+			}
+
+			#player-turn{
+				font-family: 'Helvetica', sans-serif;
+				text-align: center;
+				user-select: none;
+			}
+
+			#new-game-blocks{
+				display: flex;
+				justify-content: space-around;
+				cursor: pointer;
+			}
+
+			.new-game-block{
+				width: 150px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				text-align: center;
+				border-radius: 10px;
+				font-family: 'Helvetica', sans-serif;
+				user-select: none;
+			}
+
+			#one-player{
+				background-color: lightgreen;
+			}
+
+			#two-players{
+				background-color: lightcoral;
+			}
+
+			#new-game-header{
+				font-family: 'Helvetica', sans-serif;
+				text-align: center;
+				user-select: none;
+			}
+
+			#new-game-content{
+				visibility: visible;
+			}
+		</style>
 	</head>
 	<body class="welcomeBody">
 		<div id="header">
