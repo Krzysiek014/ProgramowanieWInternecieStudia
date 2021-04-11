@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>VOLVO - WIKI</title>
+		<script src="https://kit.fontawesome.com/69eca719cf.js" crossorigin="anonymous"></script>
 		<style>
 			body{
 				margin: 0;
-				overflow: hidden;
+				overflow-x: hidden;
 				background-image: url("background.png");
 				background-repeat: repeat;
 			}
@@ -31,6 +32,7 @@
 			}
 
 			#menu{
+				left: 0px;
 				display: flex;
 				justify-content: space-between;
 				margin-left: 10%;
@@ -60,7 +62,6 @@
 			}
 
 			.dropGlobal:hover>.menuDrop{
-				/* display: inline-grid; */
 				visibility: visible;
 			}
 
@@ -106,7 +107,6 @@
 			}
 
 			#content{
-				display: flex;
 				flex-direction: row;
 			}
 
@@ -307,6 +307,63 @@
 			#new-game-content{
 				visibility: visible;
 			}
+
+			#tabletMenu{
+				right: 12px;
+				top: 13px;
+				color: white;
+				position: absolute;
+				font-size: 30px;
+				display: none;
+			}
+
+			@media screen and (max-width: 1000px) {
+			#menu{
+				display: none;
+				flex-direction: column	;
+				width: 100%;
+				position: absolute;
+				background-color: red;
+				padding-left: 10px;
+				margin: -10px;
+				margin-top: 60px;
+				z-index: 1;
+				text-align: center;
+			}
+
+			#tabletMenu{
+				display: block;
+			}
+
+			.dropGlobal{
+				margin-left: -10px;
+				margin-right: -10px;
+				background-color: rgb(30, 30, 30);
+			}
+
+			.dropGlobal:hover{
+				background-color: rgb(30, 30, 30);
+			}
+
+			.menuDrop{
+				position: inherit;
+				visibility: visible;
+				width: 100%;
+
+			}
+			
+			#content{
+				flex: 1 1 auto;
+				flex-direction: column;
+			}
+
+			#model-description{
+				margin-right: 0px;
+			}
+
+			#game-main{
+				flex-direction: column;
+			}
 		</style>
 	</head>
 	<body class="welcomeBody">
@@ -365,6 +422,9 @@
 						<a onclick="ticTacToeSite()" class="model">Kółko i krzyżyk</a>
 					</div>
 				</div>
+			</div>
+			<div id="tabletMenu" onclick="toggleTabletMenu()">
+				<i class="fas fa-bars"></i>
 			</div>
 		</div>
 		<div id="main-welcome">
@@ -535,6 +595,7 @@
 			var main = document.getElementById("main-welcome");
 
 			function s40Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -543,6 +604,7 @@
 			}
 			
 			function s60Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -551,6 +613,7 @@
 			}
 
 			function s80Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -559,6 +622,7 @@
 			}
 
 			function c30Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -567,6 +631,7 @@
 			}
 
 			function c70Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -575,6 +640,7 @@
 			}
 			
 			function v40Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -583,6 +649,7 @@
 			}
 
 			function v50Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -591,6 +658,7 @@
 			}
 
 			function v60Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -599,6 +667,7 @@
 			}
 
 			function v70Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -607,6 +676,7 @@
 			}
 
 			function v90Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -615,6 +685,7 @@
 			}
 
 			function xc40Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -623,6 +694,7 @@
 			}
 
 			function xc60Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -631,6 +703,7 @@
 			}
 			
 			function xc90Site(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -639,6 +712,7 @@
 			}
 
 			function ticTacToeSite(){
+				toggleTabletMenu()
 				if(document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList);
 				}
@@ -666,11 +740,23 @@
 			}
 
 			function home(){
+				toggleTabletMenu()
 				if(!document.getElementsByTagName('body')[0].classList.length){
 					document.getElementsByTagName('body')[0].classList.add('welcomeBody');
 				}
 				main.id = 'main-welcome';
 				main.innerHTML = '<div id="welcome"><img id="welcome-logo" alt="Volvo logo" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Volvo_logo.svg"/><p id="welcome-message">Zapraszamy do zapoznania się z modelami Volvo dostępnymi w menu znajdującym się na górze strony.</p></div>';
+			}
+
+			function toggleTabletMenu(){
+				if(window.innerWidth<=1000){
+					var menu = document.getElementById('menu');
+					if(menu.style.display != 'flex'){
+						menu.style.display = 'flex';
+					}else{
+						menu.style.display = 'none';
+					}
+				}
 			}
 		</script>
 	</body>
